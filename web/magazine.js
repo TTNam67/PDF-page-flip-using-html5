@@ -41,6 +41,18 @@ var MagazineView = {
         $(document).on('click', '#magazineContainer .next-button', function (e) {
             $("#magazine").turn('next');
         });
+
+        $(document).on('keydown', function (e) {
+            if (e.key === "ArrowLeft") {
+              $("#magazine").turn('previous');
+            }
+          });
+
+          $(document).on('keydown', function (e) {
+            if (e.key === "ArrowRight") {
+              $("#magazine").turn('next');
+            }
+          });
 		
 		if(window.location.hash.indexOf('magazineMode=true') == -1)
         {
